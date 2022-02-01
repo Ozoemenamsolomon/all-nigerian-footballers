@@ -22,6 +22,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(js|ts|tsx)\" --quiet --fix",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(js|ts|tsx|css|scss|json|md|html)\" --write",
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
