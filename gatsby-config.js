@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Typescript Tailwind Starter',
+    title: 'All Nigerian Fooballers',
     description:
-      'The default gatsby starter with typescript, tailwdind css & latest package',
-    author: '@danangekal',
+      'An open source project for infos on the past and present players of the super eagles',
+    author: '@iam_solozo',
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -38,8 +38,6 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables for gatsby cloud
-    // 'gatsby-plugin-gatsby-cloud',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     'gatsby-plugin-offline',

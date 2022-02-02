@@ -61,3 +61,4 @@ yarn-error.log*
 # Yarn Integrity file
 .yarn-integrity
 changelog.config.json
+.husky/_/husky.sh

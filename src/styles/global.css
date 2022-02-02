@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .styled-link {
+    @apply text-9jaGreen hocus:underline hocus:decoration-9jaGreen;
+  }
+}

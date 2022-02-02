@@ -9,6 +9,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Header from './header';
+import Footer from './Footer';
 // import './layout.css';
 
 interface LayoutProps {
@@ -27,25 +28,18 @@ function Layout({ children }: LayoutProps): ReactElement {
   `);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <div className="my-0 mx-auto max-w-4xl pt-0 px-4 pb-6">
-        <main>{children}</main>
-        <footer className="mt-8">
-          ©
-          {' '}
-          {new Date().getFullYear()}
-          , Built with
-          {' '}
-          <a
-            className="text-purple-600 underline hover:text-purple-800 active:text-purple-800 font-sans"
-            href="https://www.gatsbyjs.com"
-          >
-            Gatsby
-          </a>
-        </footer>
-      </div>
-    </>
+      <main
+        className="
+      flex-1"
+      >
+        <div className="container accent-9jaGreen caret-9jaGreen pb-6">
+          {children}
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
