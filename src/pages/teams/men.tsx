@@ -1,7 +1,32 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import Layout from '../../components/layout';
+import PlayerCard from '../../components/PlayerCard';
 
-const teamPositions = [
+export type PlayerType = {
+  firstName: string;
+  lastName: string;
+  number: number;
+  slug: string;
+};
+const samplePlayers = [
+  {
+    firstName: 'Maduka',
+    lastName: 'Okoye',
+    number: 1,
+    slug: 'maduka-okoye-1',
+  },
+  {
+    firstName: 'Francis',
+    lastName: 'Uzoho',
+    number: 23,
+    slug: 'francis-uzoho-23',
+  },
+];
+
+const teamPositions: {
+  title: string;
+  players: PlayerType[];
+}[] = [
   {
     title: 'Goalkeepers',
     players: [
@@ -17,52 +42,44 @@ const teamPositions = [
         number: 23,
         slug: 'francis-uzoho-23',
       },
+      ...Array(1).fill(samplePlayers).flat(),
     ],
   },
   {
     title: 'Defenders',
-    players: [],
+    players: [...Array(3).fill(samplePlayers).flat()],
   },
   {
     title: 'Midfielders',
-    players: [],
+    players: [...Array(2).fill(samplePlayers).flat()],
   },
   {
     title: 'Strikers',
-    players: [],
+    players: [...Array(4).fill(samplePlayers).flat()],
   },
   {
     title: 'Manager',
-    players: [],
+    players: [...Array(1).fill(samplePlayers).flat()],
   },
 ];
 
 const Men = () => {
   return (
-    <div>
-      <ul className="">
+    <Layout>
+      <ul className="grid gap-12">
         {teamPositions.map(({ players, title }) => (
           <li>
-            <h2>{title}</h2>
+            <h2 className="font-bold mb-1 text-2xl">{title}</h2>
             <hr />
-            <div className="grid grid-cols-4">
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-4 mt-4 space-y-4 md:space-y-0 md:gap-4">
               {players.map((player) => (
-                <div>
-                  <Link to={`/player/${player.slug}`}>
-                    <img src="" alt="" />
-                    <h3>
-                      {player.firstName}
-                      <br />
-                      {player.lastName}
-                    </h3>
-                  </Link>
-                </div>
+                <PlayerCard player={player} />
               ))}
             </div>
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 };
 

@@ -30,11 +30,8 @@ function Layout({ children }: LayoutProps): ReactElement {
   return (
     <div className="min-h-screen flex flex-col">
       <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <main
-        className="
-      flex-1"
-      >
-        <div className="container accent-9jaGreen caret-9jaGreen pb-6">
+      <main className="flex-1 py-4">
+        <div className="container min-h-full accent-9jaGreen caret-9jaGreen pb-6">
           {children}
         </div>
       </main>
