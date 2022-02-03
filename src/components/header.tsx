@@ -11,8 +11,10 @@ function Header({ siteTitle }: HeaderProps): ReactElement {
         <Link className="text-white no-underline py-2" to="/">
           <h1 className="m-0 text-lg font-bold font-sans">{siteTitle}</h1>
         </Link>
-        <nav>
-          <Link to="/players">Players</Link>
+        <nav className="">
+          <Link className="flex items-center h-full" to="/teams">
+            Teams
+          </Link>
         </nav>
       </div>
     </header>

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'All Nigerian Fooballers',
     description:
-      'An open source project for infos on the past and present players of the super eagles',
+      'An open source project for infos on the past and present players of the super eagles.',
     author: '@iam_solozo',
   },
   plugins: [

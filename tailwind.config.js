@@ -35,6 +35,7 @@ module.exports = {
         h5: { fontSize: theme('fontSize.sm') },
       });
       addVariant('hocus', ['&:hover', '&:focus']);
+      addVariant('hofowi', ['&:hover', '&:focus-within']);
     }),
   ],
 };
