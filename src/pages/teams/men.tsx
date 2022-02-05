@@ -10,9 +10,9 @@ export type PlayerType = {
 };
 const samplePlayers = [
   {
-    firstName: 'Maduka',
-    lastName: 'Okoye',
-    number: 1,
+    firstName: 'Solomon Obinna',
+    lastName: 'Ozoemenam',
+    number: 7,
     slug: 'maduka-okoye-1',
   },
   {
@@ -21,64 +21,101 @@ const samplePlayers = [
     number: 23,
     slug: 'francis-uzoho-23',
   },
+  {
+    firstName: 'Maduka',
+    lastName: 'Okoye',
+    number: 1,
+    slug: 'maduka-okoye-1',
+  },
+  {
+    firstName: 'William',
+    lastName: 'Troost-Ekong',
+    number: 5,
+    slug: 'william-troost-ekong',
+  },
 ];
 
-const teamPositions: {
-  title: string;
-  players: PlayerType[];
-}[] = [
-  {
-    title: 'Goalkeepers',
-    players: [
-      {
-        firstName: 'Maduka',
-        lastName: 'Okoye',
-        number: 1,
-        slug: 'maduka-okoye-1',
-      },
-      {
-        firstName: 'Francis',
-        lastName: 'Uzoho',
-        number: 23,
-        slug: 'francis-uzoho-23',
-      },
-      ...Array(1).fill(samplePlayers).flat(),
-    ],
-  },
-  {
-    title: 'Defenders',
-    players: [...Array(3).fill(samplePlayers).flat()],
-  },
-  {
-    title: 'Midfielders',
-    players: [...Array(2).fill(samplePlayers).flat()],
-  },
-  {
-    title: 'Strikers',
-    players: [...Array(4).fill(samplePlayers).flat()],
-  },
-  {
-    title: 'Manager',
-    players: [...Array(1).fill(samplePlayers).flat()],
-  },
-];
+// const teamPositions: {
+//   title: string;
+//   players: PlayerType[];
+// }[] = ;
+
+const team = {
+  title: "Men's team",
+  positions: [
+    {
+      title: 'Goalkeepers',
+      players: [
+        {
+          firstName: 'Maduka',
+          lastName: 'Okoye',
+          number: 1,
+          slug: 'maduka-okoye-1',
+        },
+        {
+          firstName: 'Francis',
+          lastName: 'Uzoho',
+          number: 23,
+          slug: 'francis-uzoho-23',
+        },
+        {
+          firstName: 'Daniel',
+          lastName: 'Akpeyi',
+          number: 16,
+          slug: 'daniel-akpezi-16',
+        },
+        {
+          firstName: 'John',
+          lastName: 'Noble',
+          number: 27,
+          slug: 'john-noble-27',
+        },
+      ],
+    },
+    {
+      title: 'Defenders',
+      players: [
+        {
+          firstName: 'William',
+          lastName: 'Troost-Ekong',
+          number: 5,
+          slug: 'william-troost-ekong-5',
+        },
+        ...Array(2).fill(samplePlayers).flat(),
+      ],
+    },
+    {
+      title: 'Midfielders',
+      players: [...Array(2).fill(samplePlayers).flat()],
+    },
+    {
+      title: 'Strikers',
+      players: [...Array(3).fill(samplePlayers).flat()],
+    },
+    {
+      title: 'Manager',
+      players: [...Array(1).fill(samplePlayers).flat()],
+    },
+  ],
+};
 
 const Men = () => {
   return (
     <Layout>
-      <ul className="grid gap-12">
-        {teamPositions.map(({ players, title }) => (
-          <li>
+      <h1 className="font-bold mb-8">{team.title}</h1>
+      <div className="grid gap-12">
+        {team.positions.map(({ players, title }) => (
+          <section className="bg-gradient-to-t from-transparent to-gray-100 p-4">
             <h2 className="font-bold mb-1 text-2xl">{title}</h2>
-            <hr />
-            <div className="md:grid md:grid-cols-2 lg:grid-cols-4 mt-4 space-y-4 md:space-y-0 md:gap-4">
+            <hr className="border-1 bg-[#e5e7eb]" />
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4 space-y-4 sm:space-y-0 sm:gap-4">
               {players.map((player) => (
                 <PlayerCard player={player} />
               ))}
             </div>
-          </li>
+          </section>
         ))}
-      </ul>
+      </div>
     </Layout>
   );
 };

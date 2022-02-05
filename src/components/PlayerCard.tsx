@@ -17,13 +17,13 @@ const PlayerCard: FC<PlayerCardProps> = ({
           alt=""
         />
         <div className="p-2 flex space-x-2 items-center aspect-[4]">
-          <p className="text-9jaGreen/25 font-bold text-3xl">#{number}</p>
+          <p className="text-9jaGreen/25 font-bold text-2xl">#{number}</p>
           <hr className="h-full w-[1px] bg-9jaGreen" />
           <div>
             <h4>{firstName}</h4>
             <h3
-              style={{ WebkitTextStroke: '.6px rgb(0 135 83 / 1)' }}
-              className="text-transparent outline font-extrabold text-2xl stroke-black"
+              style={{ WebkitTextStroke: '.7px rgb(0 135 83 / 1)' }}
+              className="text-transparent outline font-extrabold tracking-wide uppercase text-2xl stroke-black"
             >
               {lastName}
             </h3>
