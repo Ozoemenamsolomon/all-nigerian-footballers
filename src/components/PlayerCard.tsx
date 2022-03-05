@@ -6,11 +6,11 @@ type PlayerCardProps = {
 };
 
 const PlayerCard: FC<PlayerCardProps> = ({
-  player: { firstName, lastName, number, slug },
+  player: { firstName, lastName, number, href },
 }) => {
   return (
     <div className="group rounded-lg transition hofowi:shadow-2xl shadow-md duration-500 overflow-hidden aspect-[0.9]">
-      <Link className="flex flex-col h-full w-full" to={`/player/${slug}`}>
+      <Link className="flex flex-col h-full w-full" to={href}>
         <img
           className="w-full flex-1 object-cover transition-transform ease-out duration-1000 group-hover:scale-105 group-focus-within:scale-105"
           src="https://cdn.dribbble.com/users/37585/screenshots/6394786/helm_shot396_4x.png?compress=1&resize=300x225&vertical=top"

@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import { ReactElement } from 'react';
 
 import Layout from '../components/layout';
@@ -11,7 +12,12 @@ function IndexPage(): ReactElement {
       <p className="mb-6">
         Welcome to your new Gatsby site with Typescript {'&'} Tailwind CSS.
       </p>
-      <p className="mb-6">Now go build something great.</p>
+      <p className="mb-6">
+        check out the Super eagles{' '}
+        <Link className="font-bold text-2xl underline" to="/teams">
+          teams
+        </Link>
+      </p>
     </Layout>
   );
 }

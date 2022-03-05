@@ -7,6 +7,7 @@ export type PlayerType = {
   lastName: string;
   number: number;
   slug: string;
+  href: string;
 };
 const samplePlayers = [
   {
@@ -14,24 +15,28 @@ const samplePlayers = [
     lastName: 'Ozoemenam',
     number: 7,
     slug: 'maduka-okoye-1',
+    href: '/player/maduka-okoye-1',
   },
   {
     firstName: 'Francis',
     lastName: 'Uzoho',
     number: 23,
     slug: 'francis-uzoho-23',
+    href: '/player/maduka-okoye-1',
   },
   {
     firstName: 'Maduka',
     lastName: 'Okoye',
     number: 1,
     slug: 'maduka-okoye-1',
+    href: '/player/maduka-okoye-1',
   },
   {
     firstName: 'William',
     lastName: 'Troost-Ekong',
     number: 5,
     slug: 'william-troost-ekong',
+    href: '/player/maduka-okoye-1',
   },
 ];
 
@@ -51,24 +56,28 @@ const team = {
           lastName: 'Okoye',
           number: 1,
           slug: 'maduka-okoye-1',
+          href: '/player/maduka-okoye-1',
         },
         {
           firstName: 'Francis',
           lastName: 'Uzoho',
           number: 23,
           slug: 'francis-uzoho-23',
+          href: '/player/maduka-okoye-1',
         },
         {
           firstName: 'Daniel',
           lastName: 'Akpeyi',
           number: 16,
           slug: 'daniel-akpezi-16',
+          href: '/player/maduka-okoye-1',
         },
         {
           firstName: 'John',
           lastName: 'Noble',
           number: 27,
           slug: 'john-noble-27',
+          href: '/player/maduka-okoye-1',
         },
       ],
     },
@@ -80,6 +89,7 @@ const team = {
           lastName: 'Troost-Ekong',
           number: 5,
           slug: 'william-troost-ekong-5',
+          href: '/player/maduka-okoye-1',
         },
         ...Array(2).fill(samplePlayers).flat(),
       ],
