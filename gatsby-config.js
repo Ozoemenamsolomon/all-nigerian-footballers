@@ -29,12 +29,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'All Nigerian Footballers',
+        short_name: 'Naija Footballers',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
+        background_color: '#008753',
+        theme_color: '#008753',
+        display: 'standalone',
         icon: 'src/images/nff-logo.png', // This path is relative to the root of the site.
       },
     },
